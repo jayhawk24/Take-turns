@@ -2,10 +2,10 @@
 function redirect_to($loc){
 		header("Location:".$loc);
 }
-	$host= " localhost";
-	$username = "mysqlusername"	;
-	$pass = "yourpass"; #changethis
-	$database = "yourdbname";
+	    $host= "";
+	    $username = ""	;
+	    $pass = ""; #changethis
+	    $database = "";
 $conn=mysqli_connect($host,$username,$pass,$database);
 	if(mysqli_connect_errno())
 	{
@@ -137,7 +137,7 @@ if(isset($_POST['signin']))
 			$name=$_POST['newuser'];
 			$pass=$_POST['newpass'];
 				if(isset($_POST['createtab'])){
-					$query3="Create table ".$table."( ID INT not null Auto_increment, name varchar(30) not null, password varchar(30) not null ,primary key(id));";
+					$query3="Create table ".$table."( id INT not null Auto_increment, name varchar(30) not null, password varchar(30) not null ,primary key(id));";
 					$result3= mysqli_query($conn,$query3);
 						if(!$result3){
 							echo "Something's wrong Our developers are informed about this...";

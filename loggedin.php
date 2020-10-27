@@ -2,10 +2,10 @@
 function redirect_to($loc){
 		header("Location:".$loc);
 	}
-	$host= " localhost";
-	$username = "mysqlusername";	
-	$pass = "yourpass"; #changethis
-	$database = "yourdbname";
+		$host= "";
+	    $username = ""	;
+	    $pass = ""; #changethis
+	    $database = "";
 $conn=mysqli_connect($host,$username,$pass,$database);
 	if(mysqli_connect_errno())
 	{
@@ -99,7 +99,7 @@ $table=$_GET['table'];
 	<?php
 		$count=0;
 		while($row = mysqli_fetch_array($result)){
-		$id[$count]=$row["id"];
+		$id=$row["ID"];
 		$userName[$count]=$row["name"];
 		echo $row['name'];
 			echo "<br><br>";

@@ -2,10 +2,10 @@
 	function redirect_to($loc){
 		header("Location:".$loc);
 	}
-		$host= " localhost";
-	$username = "mysqlusername"	;
-	$pass = "yourpass"; #changethis
-	$database = "yourdbname";
+		$host= "";
+	    $username = ""	;
+	    $pass = ""; #changethis
+	    $database = "";
 $conn=mysqli_connect($host,$username,$pass,$database);
 	if(mysqli_connect_errno())
 	{
